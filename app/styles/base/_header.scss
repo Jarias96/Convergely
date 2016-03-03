@@ -1,0 +1,39 @@
+.hd {
+  background-color: transparent;
+  height: 50px;
+  left: 0;
+  padding: 13px 50px 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: background-color 0.5s ease-out;
+  &__title {
+    display: inline-block;
+  }
+
+  &__menu {
+    float: right;
+    padding-top: 9px;
+    @media screen and (max-width: 540px) {
+      display: none;
+    }
+  }
+
+  &__menu-link {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0 20px;
+    text-decoration: none;
+    transition: padding-right 0.5s;
+    &:hover {
+      border-bottom: 1px solid #ffffff;
+      border-radius: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.hd-move {
+  background-color: rgba(58, 73, 80, 0.8);
+}

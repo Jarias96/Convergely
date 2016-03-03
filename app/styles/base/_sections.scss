@@ -1,0 +1,77 @@
+$arrayColorBckg: rgba(144, 124, 146, 0.7), rgba(251, 174, 79, 0.7), rgba(9, 171, 201, 0.7);
+
+.sct {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  .sct__sct-ctn {
+    display: inline-flex;
+    text-align: center;
+    @for $i from 1 through 3 {
+      &--img#{$i} {
+        background-image: url(../../images/sctIMG#{$i}.png);
+        background-position: cover;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+
+    @media screen and (max-width: 764px) {
+      margin: 10px 10px 0;
+      max-width: 600px;
+    }
+  }
+
+  &__sct-cap {
+    color: #ffffff;
+    padding: 40px 30px 20px;
+    width: 100%;
+    @for  $i from 1 through 3 {
+      &--bckg#{$i} {
+        background-color: nth($arrayColorBckg, $i);
+      }
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    @media screen and (max-width: 764px) {
+      display: block;
+    }
+  }
+
+  &__ctn {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    display: block;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: 764px) {
+    display: block;
+  }
+}
